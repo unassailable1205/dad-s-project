@@ -1,0 +1,19 @@
+{
+  "name": "authentication-system",
+  "version": "1.0.0",
+  "description": "Production-ready authentication system with Next.js, Express, MongoDB, JWT, and OTP",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev --workspace=frontend\" \"npm run dev --workspace=backend\"",
+    "build": "npm run build --workspace=frontend && npm run build --workspace=backend",
+    "start": "concurrently \"npm start --workspace=frontend\" \"npm start --workspace=backend\"",
+    "test": "npm test --workspace=frontend && npm test --workspace=backend"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.1"
+  }
+}
